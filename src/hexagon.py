@@ -17,8 +17,8 @@ for q in range(-board_size, board_size + 1):
     for r in range(-board_size, board_size + 1):
         s = -q-r
         if abs(s) <= board_size:
-            x_offset = 0.5 if r % 2 == 0 else 0
-            draw_hex(ax, (q + x_offset, r * np.sqrt(3) / 2), 0.5)
+            x_offset = 0 if r % 2 == 0.5 else 0
+            draw_hex(ax, (q + x_offset + (r/2), r * np.sqrt(3) / 2), 0.5)
 
 # Configurar límites
 ax.set_xlim(-board_size-1, board_size+1)
